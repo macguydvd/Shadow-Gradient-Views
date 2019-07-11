@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14810.11" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14766.13"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +11,133 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Shadow_Gradient_Views" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sSt-Ef-3Nu" customClass="ShadowGradientRectView" customModule="Shadow_Gradient_Views" customModuleProvider="target">
+                                <rect key="frame" x="20" y="64" width="374" height="374"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
+                                        <real key="value" value="20"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="bottomColor">
+                                        <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="topColor">
+                                        <color key="value" red="0.082352941176470587" green="0.082352941176470587" blue="0.082352941176470587" alpha="0.84999999999999998" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isCircle" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fn8-VH-StY" customClass="GaugeView" customModule="Shadow_Gradient_Views" customModuleProvider="target">
+                                <rect key="frame" x="15" y="59" width="384" height="384"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vcO-cj-V2e" customClass="ShadowGradientRectView" customModule="Shadow_Gradient_Views" customModuleProvider="target">
+                                <rect key="frame" x="113.5" y="157.5" width="187" height="187"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
+                                        <real key="value" value="20"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="bottomColor">
+                                        <color key="value" red="0.082352941176470587" green="0.082352941176470587" blue="0.082352941176470587" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="topColor">
+                                        <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                                        <real key="value" value="0.5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isCircle" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mk0-2n-kVI" customClass="GaugeCoverView" customModule="Shadow_Gradient_Views" customModuleProvider="target">
+                                <rect key="frame" x="112.5" y="156.5" width="189" height="189"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="bottomColor">
+                                        <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="topColor">
+                                        <color key="value" red="0.08235294118" green="0.08235294118" blue="0.08235294118" alpha="0.84999999999999998" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                                        <real key="value" value="0.5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QVK-Dq-Ktc" customClass="ShadowGradientRectView" customModule="Shadow_Gradient_Views" customModuleProvider="target">
+                                <rect key="frame" x="20" y="611" width="374" height="231"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="QVK-Dq-Ktc" secondAttribute="height" multiplier="1.61803:1" id="cXp-NV-Bd7"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
+                                        <real key="value" value="20"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="bottomColor">
+                                        <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="topColor">
+                                        <color key="value" red="0.082352941176470587" green="0.082352941176470587" blue="0.082352941176470587" alpha="0.84999999999999998" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="0.066666666666666666" green="0.066666666666666666" blue="0.066666666666666666" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="sSt-Ef-3Nu" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="4rZ-ZI-4Sh"/>
+                            <constraint firstItem="sSt-Ef-3Nu" firstAttribute="width" secondItem="sSt-Ef-3Nu" secondAttribute="height" multiplier="1:1" id="7ir-Vs-TnZ"/>
+                            <constraint firstItem="fn8-VH-StY" firstAttribute="centerY" secondItem="sSt-Ef-3Nu" secondAttribute="centerY" id="8vG-nd-jLF"/>
+                            <constraint firstItem="vcO-cj-V2e" firstAttribute="height" secondItem="sSt-Ef-3Nu" secondAttribute="height" multiplier="0.5" id="DPb-6U-ZeK"/>
+                            <constraint firstItem="fn8-VH-StY" firstAttribute="centerX" secondItem="sSt-Ef-3Nu" secondAttribute="centerX" id="HoQ-sX-stj"/>
+                            <constraint firstItem="fn8-VH-StY" firstAttribute="height" secondItem="sSt-Ef-3Nu" secondAttribute="height" constant="10" id="Ktn-QP-Low"/>
+                            <constraint firstItem="vcO-cj-V2e" firstAttribute="centerY" secondItem="sSt-Ef-3Nu" secondAttribute="centerY" id="SWI-UD-L7f"/>
+                            <constraint firstItem="sSt-Ef-3Nu" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="bBQ-1A-z56"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="QVK-Dq-Ktc" secondAttribute="bottom" constant="20" id="dl9-3x-K3k"/>
+                            <constraint firstItem="vcO-cj-V2e" firstAttribute="centerX" secondItem="sSt-Ef-3Nu" secondAttribute="centerX" id="eKe-Hk-skN"/>
+                            <constraint firstItem="vcO-cj-V2e" firstAttribute="width" secondItem="sSt-Ef-3Nu" secondAttribute="width" multiplier="0.5" id="iO3-DL-ake"/>
+                            <constraint firstItem="QVK-Dq-Ktc" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="l6z-hx-g7O"/>
+                            <constraint firstItem="mk0-2n-kVI" firstAttribute="height" secondItem="sSt-Ef-3Nu" secondAttribute="height" multiplier="0.5" constant="2" id="lLS-q6-QvC"/>
+                            <constraint firstItem="QVK-Dq-Ktc" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" constant="-40" id="qpf-9n-5os"/>
+                            <constraint firstItem="sSt-Ef-3Nu" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" constant="-40" id="rR3-pO-p8U"/>
+                            <constraint firstItem="mk0-2n-kVI" firstAttribute="centerX" secondItem="sSt-Ef-3Nu" secondAttribute="centerX" id="thZ-No-6ry"/>
+                            <constraint firstItem="mk0-2n-kVI" firstAttribute="centerY" secondItem="sSt-Ef-3Nu" secondAttribute="centerY" id="ufH-6f-Dp8"/>
+                            <constraint firstItem="mk0-2n-kVI" firstAttribute="width" secondItem="sSt-Ef-3Nu" secondAttribute="width" multiplier="0.5" constant="2" id="vHD-Kk-6yd"/>
+                            <constraint firstItem="fn8-VH-StY" firstAttribute="width" secondItem="sSt-Ef-3Nu" secondAttribute="width" constant="10" id="vvm-D6-K5z"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="119" y="95"/>
         </scene>
     </scenes>
 </document>
